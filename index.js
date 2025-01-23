@@ -15,6 +15,10 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('user disconnected');
       });
+
+    socket.on('chat message', (msg) => {
+        console.log('chat:', msg);
+    })
 })
 
 
@@ -28,6 +32,13 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     res.render('index');
 })
+
+
+// app.post('/submit', (req, res) => {
+//     console.log(req.body);
+//     res.redirect('/');
+// })
+
 
 server.listen(3000, () => {
     console.log('App is listening on PORT 3000');
