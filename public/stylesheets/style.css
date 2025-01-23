@@ -15,7 +15,7 @@ body {
     background-color: #87bdd8;
     /* background-color: green; */
     height: 200px;
-    width: 900px;
+    width: 800px;
     margin-top: 10px;
     border-radius: 10px 10px 0px 0px;
 
@@ -38,8 +38,8 @@ body {
 }
 
 #chatWindowDiv {
-    height: 550px;
-    width: 900px;
+    height: 450px;
+    width: 800px;
     border-radius: 0px 0px 15px 15px;
     /* background-color: #87bdd8; */
     background-color: #87bdd8;
@@ -56,6 +56,7 @@ body {
     width: 700px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 #mainChatWindow {
