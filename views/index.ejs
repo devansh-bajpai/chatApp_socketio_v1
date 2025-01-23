@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samvaad</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="headerBoxDiv">
+      <img src="/images/chatImage.png" alt="chat image" id="headerLogoImage" />
+      <h1 id="headerBoxText">Samvaad</h1>
+    </div>
+
+    <div id="chatWindowDiv">
+      <div id="mainChatWindow">
+        
+        <div class="sentMessageDiv">
+            <div class="sentMessage">
+                <p class="messageText">Hi there!</p>
+            </div>
+        </div>
+
+        <div class="receivedMessageDiv">
+            <div class="receivedMessage">
+                <p class="messageText">Hi there
+                </p>
+            </div>
+        </div>
+        
+
+
+      </div>
+
+      <form action="/submit" id="chatForm">
+        <input type="text" name="messageData" id="messageBoxInput" />
+        <input type="submit" value="Send" id="sendButton" />
+      </form>
+    </div>
+
+    <div id="footerDiv">
+      <a href="https://github.com/devansh-bajpai" class="footerLinks">
+        <img src="/images/githubLogo.png" alt="githubLogo" id="githubLogo" />
+        GitHub</a
+      >
+      <a href="https://youtube.com" class="footerLinks">
+        <img src="/images/linkedInLogo.png" alt="linkedinLogo" id="linkedinLogo" />
+        LinkedIn</a
+      >
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
