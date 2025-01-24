@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const fs = require('fs');
+
 const { createServer } = require('node:http');
 const { Server } = require("socket.io");
 const server = createServer(app);
@@ -19,6 +21,14 @@ io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
         // console.log('chat:', msg);
         socket.broadcast.emit('loadMessage', msg);
+
+        fs.appendFile('./message_log/log.txt', msg + '\n', (err) => {
+            if(err){
+                console.log(err);
+            }
+        })
+
+
     })
 
 })
@@ -32,7 +42,12 @@ app.use(cookieParser());
 
 
 app.get('/', (req, res) => {
-    res.render('index');
+    fs.readFile('./message_log/log.txt', 'utf-8', (err, data) => {
+        let messageArray = data.split('\n');
+        messageArray.pop();
+        // console.log(messageArray);
+        res.render('index', {messages: messageArray});
+    })
 })
 
 

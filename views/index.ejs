@@ -34,8 +34,15 @@
                 </p>
             </div>
         </div> -->
-        
-
+        <%if(messages != []){%>
+          <% for (message of messages) {%>
+              <div class="receivedMessageDiv">
+            <div class="receivedMessage">
+                <p class="messageText"><%=message%></p>
+            </div>
+        </div>
+          <%}%>
+        <%}%>
 
       </div>
 

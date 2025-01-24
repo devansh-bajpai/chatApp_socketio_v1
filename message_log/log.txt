@@ -1,0 +1,2 @@
+[Server]: Chat History is now being saved
+[Server]: More Updates will be added soon!
